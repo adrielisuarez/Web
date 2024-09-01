@@ -1,0 +1,59 @@
+/* Estilo do corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+/* Estilo do carrossel */
+#carrossel {
+    margin-top: 20px;
+}
+
+.carousel-img {
+    height: 500px; 
+    object-fit: cover; 
+    width: 100%; 
+}
+
+
+
+/* Estilo dos cards */
+.card {
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Garante que o card ocupe toda a altura disponível do contêiner */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    height: 200px; /* Defina uma altura fixa para as imagens dos cards */
+    object-fit: cover; /* Ajusta a imagem ao tamanho do contêiner mantendo a proporção */
+}
+
+.card-body {
+    flex: 1; /* Garante que o corpo do card expanda para ocupar o espaço restante */
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 10px 0;
+}

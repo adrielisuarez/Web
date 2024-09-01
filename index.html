@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Château de Vin</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="bg-dark text-white text-center py-4">
+        <h1>Château de Vin</h1>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">Início</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Carrossel de Vinhos -->
+    <section id="carrossel" class="my-4">
+        <div id="carouselVinhos" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/adega.jpg" class="d-block w-100 carousel-img" alt="Vinho 1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Seja bem-vindo a Château de Vin</h5>
+                        <p>Descubra o sabor único que nossos vinhos podem oferecer.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/adega2.jpg" class="d-block w-100 carousel-img" alt="Vinho 2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Exclusivos</h5>
+                        <p>Vinhos únicos e exclusivos para deixar sua esperiência cada vez mais especial.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/adega3.png" class="d-block w-100 carousel-img" alt="Vinho 3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Seletividade</h5>
+                        <p>Com uvas devidamente selecionadas e frescas nós temos os melhores vinhos.</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselVinhos" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselVinhos" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Seção de Vinhos Dinâmicos -->
+    <section id="vinhos" class="container my-4">
+        <h2 class="text-center">Nosso Catálogo</h2>
+        <div id="produtos" class="row">
+            <!-- Produtos carregados JavaScript -->
+        </div>
+    </section>
+
+    <!-- Modal de Pagamento -->
+    <div class="modal fade" id="paymentModal" tabindex="-1" role="dialog" aria-labelledby="paymentModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="paymentModalLabel">Pagamento</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="paymentForm">
+                        <div class="form-group">
+                            <label for="nomeCliente">Nome do Cliente</label>
+                            <input type="text" class="form-control" id="nomeCliente" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="numeroCartao">Número do Cartão</label>
+                            <input type="text" class="form-control" id="numeroCartao" pattern="[a-zA-Z0-9]*" required>
+                            <small class="form-text text-muted">*Apenas caracteres alfanuméricos são permitidos.*</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="metodoPagamento">Método de Pagamento</label>
+                            <select class="form-control" id="metodoPagamento" required>
+                                <option value="Credito">Crédito</option>
+								<option value="Debito">Débito</option>
+                                <option value="Boleto">Boleto</option>
+                                <option value="Pix">Pix</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Formato do Comprovante</label>
+                            <div>
+                                <input type="radio" id="formatoPdf" name="formato" value="pdf" checked>
+                                <label for="formatoPdf">PDF</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="formatoXml" name="formato" value="xml">
+                                <label for="formatoXml">XML</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="formatoJson" name="formato" value="json">
+                                <label for="formatoJson">JSON</label>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="confirmarPagamento">Confirmar Pagamento</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>© 2024 Château de Vin. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

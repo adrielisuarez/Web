@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Château de Vin</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="bg-dark text-white text-center py-4">
+        <h1>Château de Vin</h1>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">Início</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Formulário de Login e Cadastro -->
+    <div class="container my-5">
+        <div class="form-container">
+            <div class="form-panel left-panel">
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="emailLogin">Email:</label>
+                        <input type="email" class="form-control" id="emailLogin" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="senhaLogin">Senha:</label>
+                        <input type="password" class="form-control" id="senhaLogin" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Entrar</button>
+                </form>
+                <button class="btn btn-link" id="switchToSignup">Não tem uma conta? Cadastre-se</button>
+            </div>
+
+            <div class="form-panel right-panel">
+                <h2>Cadastro</h2>
+                <form id="signupForm">
+                    <div class="form-group">
+                        <label for="nomeCadastro">Nome:</label>
+                        <input type="text" class="form-control" id="nomeCadastro" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailCadastro">Email:</label>
+                        <input type="email" class="form-control" id="emailCadastro" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="senhaCadastro">Senha:</label>
+                        <input type="password" class="form-control" id="senhaCadastro" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tipoUsuario">Tipo de Usuário:</label>
+                        <select class="form-control" id="tipoUsuario" required>
+                            <option value="usuario">Usuário</option>
+                            <option value="administrador">Administrador</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-success">Cadastrar</button>
+                </form>
+                <button class="btn btn-link" id="switchToLogin">Já tem uma conta? Faça login</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>© 2024 Château de Vin. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>
