@@ -1,6 +1,6 @@
 // Função para carregar usuários do arquivo JSON
 function carregarUsuarios() {
-    return fetch('admin.json')
+    return fetch('data/admin.json')
         .then(response => response.json())
         .then(data => data)
         .catch(error => console.error('Erro ao carregar usuários:', error));
