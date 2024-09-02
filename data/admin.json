@@ -1,0 +1,8 @@
+[
+    {
+        "nome": "Admin",
+        "email": "admin@chateaudewin.com",
+        "senha": "admin123",
+        "tipoUsuario": "administrador"
+    }
+]
